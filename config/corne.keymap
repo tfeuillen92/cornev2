@@ -15,6 +15,16 @@
             #binding-cells = <0>;
             bindings = <&macro_press>, <&kp LCTRL &kp RALT &kp LEFT>;
         };
+
+        WKR: WKR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_ALT &kp RIGHT>;
+
+            label = "WKR";
+        };
     };
 };
 
@@ -45,10 +55,10 @@
             //                    |     |     |     |   |     |     |     |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &WKL      &trans  &trans     &trans  &trans
-                                        &trans        &trans        &trans          &trans    &trans    &trans
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6  &kp N7    &kp N8     &kp N9          &kp N0    &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp LEFT  &kp RIGHT  &kp UP          &kp DOWN  &trans
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans  &WKL      &WKR       &kp SCROLLLOCK  &trans    &trans
+                                        &trans        &trans        &trans          &trans  &trans    &trans
             >;
         };
 
